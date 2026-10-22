@@ -56,3 +56,14 @@ The problem with Coursenaut, architecture wise, is that while the site promises 
 | **Containerization** | Docker | Environment parity via lightweight containerization |
 
 In this repo you will find the redefined backend for Coursenaut in a first attempt to address the overshooting and underperformance of some features.
+
+### **Coursenaut AppLab Backend - Master Roadmap**
+
+| Milestone | Status | Key Deliverables & Technical Scope |
+| :--- | :---: | :--- |
+| **Chunk 1: Project Setup & Health Check** | ✅ **DONE** | Virtual environment, dependencies, Flask App Factory, `.env` config, and `/health` route. |
+| **Chunk 2: Normalized Database Models** | 🔄 **NEXT** | SQLAlchemy models: `AppLab` (reusable AI templates), `Assignment` (Classroom instances), and `StudentSubmission` (grades & retry states). |
+| **Chunk 3: Service Layer & Business Logic** | ⏳ Pending | `ClassroomService` handling completion, retry state machine, grade sync logic, and transaction rollback safety. |
+| **Chunk 4: API Blueprints & Routes** | ⏳ Pending | Modular Flask endpoints (`assignments_bp`) for lab management, student submissions, and teacher retries. |
+| **Chunk 5: Automated Testing Suite** | ⏳ Pending | `pytest` coverage using in-memory SQLite (`sqlite:///:memory:`) testing state transitions and transaction safety. |
+| **Chunk 6: Dockerization & GCP Readiness** | ⏳ Pending | Production `Dockerfile`, Gunicorn WSGI web server config, and GCP Cloud Run / Cloud SQL environment preparation. |
